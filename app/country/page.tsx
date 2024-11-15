@@ -22,7 +22,7 @@ type CountryData = {
 
 export default function CountryPage() {
   const [selectedCountry, setSelectedCountry] = useState<string>("south-korea");
-  const [selectedDate, setSelectedDate] = useState<string>("2024-11-14");
+  // const [selectedDate, setSelectedDate] = useState<string>("2024-11-14");
   const [countryData, setCountryData] = useState<CountryData | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -49,7 +49,7 @@ export default function CountryPage() {
 
   useEffect(() => {
     fetchCountryData(selectedCountry);
-  }, [selectedCountry, selectedDate]);
+  }, [selectedCountry]);
 
   return (
     <>
