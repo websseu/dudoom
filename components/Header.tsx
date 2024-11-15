@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 
 const menuItems = [
   { href: "/", label: "Home" },
-  { href: "/top", label: "Top10" },
-  { href: "/movie", label: "Movie" },
-  { href: "/blog", label: "Blog" },
+  { href: "/country", label: "Country" },
+  { href: "/global", label: "Global" },
+  { href: "/popular", label: "Popular" },
   { href: "/trending", label: "Trending" },
 ];
 
