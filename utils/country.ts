@@ -79,7 +79,7 @@ export const netflixCountry: country[] = [
   { name: "south-africa", nameKorea: "남아프리카 공화국", icon: "🇿🇦" },
   { name: "south-korea", nameKorea: "대한민국", icon: "🇰🇷" },
   { name: "spain", nameKorea: "스페인", icon: "🇪🇸" },
-  { name: "sriLanka", nameKorea: "스리랑카", icon: "🇱🇰" },
+  { name: "sri-lanka", nameKorea: "스리랑카", icon: "🇱🇰" },
   { name: "sweden", nameKorea: "스웨덴", icon: "🇸🇪" },
   { name: "switzerland", nameKorea: "스위스", icon: "🇨🇭" },
   { name: "taiwan", nameKorea: "대만", icon: "🇹🇼" },
