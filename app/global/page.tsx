@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { GiQueenCrown } from "react-icons/gi";
 
 type Movie = {
   rank: string;
@@ -41,7 +39,7 @@ export default function GlobalPage() {
       } else {
         setError("Failed to fetch global data");
       }
-    } catch (error) {
+    } catch {
       setError("Error fetching data");
     } finally {
       setLoading(false);

@@ -22,7 +22,6 @@ type CountryData = {
 
 export default function CountryPage() {
   const [selectedCountry, setSelectedCountry] = useState<string>("south-korea");
-  // const [selectedDate, setSelectedDate] = useState<string>("2024-11-14");
   const [countryData, setCountryData] = useState<CountryData | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -32,7 +31,7 @@ export default function CountryPage() {
     setError(null);
     try {
       const response = await fetch(
-        `https://websseu.github.io/pythonNetflix/country/${country}/${country}_${selectedDate}.json`
+        `https://websseu.github.io/pythonNetflix/country/${country}/${country}_2024-11-14.json`
       );
       if (response.ok) {
         const data: CountryData = await response.json();
@@ -40,7 +39,7 @@ export default function CountryPage() {
       } else {
         setError("Failed to fetch country data");
       }
-    } catch (error) {
+    } catch {
       setError("Error fetching data");
     } finally {
       setLoading(false);
@@ -54,17 +53,6 @@ export default function CountryPage() {
   return (
     <>
       <section className="max-w-screen-xl mx-auto mt-8 px-4">
-        {/* 날짜 입력 */}
-        {/* <div className="flex items-center gap-2">
-          <label className="text-sm font-medium">날짜 선택:</label>
-          <input
-            type="date"
-            value={selectedDate}
-            onChange={(e) => setSelectedDate(e.target.value)}
-            className="border px-2 py-1 rounded"
-          />
-        </div> */}
-
         {/* 국가 선택 버튼 */}
         <div className="flex flex-wrap gap-1 mt-4">
           {netflixCountry.map((country) => (
